@@ -1,0 +1,31 @@
+.row{
+    margin-left: 20px;
+    color: white;
+}
+.row__posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* overflow is the slide bar */
+    padding: 20px;
+
+    
+}
+.row__poster{
+    width: 100%;
+    object-fit: contain; /* keep aspect ratio */
+    max-height: 100px;
+    transition: transform 450ms; /*delay the image zoom*/
+    margin-right: 10px;
+}
+.row__poster:hover{
+    transform: scale(1.08); /*zoom in*/
+    /* transform: scale(1.08); */
+}
+.row__posters::-webkit-scrollbar{ /* this is tells that the
+    never show scrollbar but keep it's functionallity */
+    display: none;
+}
+.row__posterLarge{
+   max-height: 250px;
+}
